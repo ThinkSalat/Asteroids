@@ -1,0 +1,21 @@
+/* PHASE 7: Online */
+.online{
+  background-color: yellow;
+  width: 80px;
+  height: 17px;
+  z-index: 0;
+  position: absolute;
+  transform: translate(-31px, 13px) rotate(-45deg);
+  box-shadow: 2px 2px 5px purple;
+  color: purple;
+  font-family: Roboto;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 14px;
+  padding: 5px 30px;
+
+}
+
+.profile-picture {
+    overflow: hidden;
+}
