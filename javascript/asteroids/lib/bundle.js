@@ -100,7 +100,7 @@ eval("const Util = __webpack_require__(/*! ./util.js */ \"./lib/util.js\");\nwin
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("function Game(options){\n  this.DIM_X = 800;\n  this.DIM_Y = 800;\n  this.NUM_ASTEROIDS = 45;\n  this.asteroids = [];\n  this.addAsteroids();\n  \n  \n}\n\nGame.prototype.randomPosition = function(){\n  return [Math.floor(Math.random() * this.DIM_X),Math.floor(Math.random() * this.DIM_Y)];\n};\n\nGame.prototype.addAsteroids = function(){\n  while(this.asteroids.length < this.NUM_ASTEROIDS){\n    this.asteroids.push(new Asteroid({pos:this.randomPosition()}));\n  }\n};\n\nGame.prototype.draw = function(ctx){\n  ctx.clearRect(0, 0, this.DIM_X, this.DIM_Y);\n  this.asteroids.forEach(asteroid => asteroid.draw(ctx));\n};\n\nmodule.exports  = Game;\n\n//# sourceURL=webpack:///./lib/game.js?");
+eval("function Game(options){\n  this.DIM_X = 800;\n  this.DIM_Y = 800;\n  this.NUM_ASTEROIDS = 45;\n  this.asteroids = [];\n  this.addAsteroids();\n  \n  \n}\n\nGame.prototype.randomPosition = function(){\n  return [Math.floor(Math.random() * this.DIM_X),Math.floor(Math.random() * this.DIM_Y)];\n};\n\nGame.prototype.addAsteroids = function(){\n  while(this.asteroids.length < this.NUM_ASTEROIDS){\n    this.asteroids.push(new Asteroid({pos:this.randomPosition()}));\n  }\n};\n\nGame.prototype.draw = function(ctx){\n  ctx.clearRect(0, 0, this.DIM_X, this.DIM_Y);\n  this.asteroids.forEach(asteroid => asteroid.draw(ctx));\n};\n\nGame.prototype.moveObjects = function(ctx) {\n  this.asteroids.forEach(asteroid => asteroid.move());\n  this.draw(ctx);\n};\n\nmodule.exports  = Game;\n\n//# sourceURL=webpack:///./lib/game.js?");
 
 /***/ }),
 
