@@ -26,6 +26,12 @@ MovingObject.prototype.draw = function (ctx) {
 MovingObject.prototype.move = function () {
   this.pos[0] += this.vel[0];
   this.pos[1] += this.vel[1];
+  if (this.color==='#b04545'){
+   this.color =   '#131328';
+  } else {
+    
+    this.color = '#b04545';
+  }
 };
 
 module.exports = MovingObject;
